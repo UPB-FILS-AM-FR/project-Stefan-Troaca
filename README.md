@@ -1,13 +1,13 @@
-# Your Project Name
+# Etch a Sketch Digital
 
 | | |
 |-|-|
-|`Author` | Your full name
+|`Author` | TROACA Stefan-Mihail
 
 ## Description
-testest
+Un tableau numérique de type « Etch-a-Sketch » fonctionnant grâce aux entrées du potentiomètre (une pour l'axe des x, une pour l'axe des y, et deux pour la teinte et l'opacité). Les images créées par l'utilisateur seront visibles sur l'écran LCD TFT.
 ## Motivation
-
+Je souhaitais travailler sur ce projet car il combine des principes électroniques intéressants et le résultat est un gadget artistique ingénieux.
 ## Architecture
 
 ### Block diagram
@@ -26,9 +26,9 @@ testest
 
 | Device | Usage | Price |
 |--------|--------|-------|
-| Activ Buzzer | Buzzer | [1.5 RON](https://www.optimusdigital.ro/ro/audio-buzzere/635-buzzer-activ-de-3-v.html?search_query=buzzer&results=61) |
-| Push Button | Button | [1 RON](https://www.optimusdigital.ro/ro/butoane-i-comutatoare/1119-buton-6x6x6.html?search_query=buton&results=222) |
-| Jumper Wires | Connecting components | [7 RON](https://www.optimusdigital.ro/ro/fire-fire-mufate/884-set-fire-tata-tata-40p-10-cm.html?search_query=set+fire&results=110) |
+| ESP32 DevBoard | Microcontrôleur | [39.99 RON](https://www.optimusdigital.ro/ro/wireless-altele/5834-placa-de-dezvoltare-wireless-cu-microcontroller-esp32.html?search_query=esp32&results=22) |
+| 1.8 inch TFT LCD ST7735 display | Display | [28.99 lei RON](https://www.optimusdigital.ro/ro/optoelectronice-lcd-uri/1311-modul-lcd-spi-de-18-128x160.html?search_query=TFT+LCD+ST7735&results=4) |
+| Potentiomètre | Control du device | [9 RON](https://www.optimusdigital.ro/ro/componente-electronice-potentiometre/901-rezistor-variabil-10k-wh148.html?search_query=10k+potentiometru&results=12) |
 | Breadboard | Project board | [10 RON](https://www.optimusdigital.ro/ro/prototipare-breadboard-uri/8-breadboard-830-points.html?search_query=breadboard&results=145) |
 
 ### Libraries
