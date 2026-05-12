@@ -13,7 +13,7 @@ Je souhaitais travailler sur ce projet car il combine des principes électroniqu
 ### Block diagram
 
 <!-- Make sure the path to the picture is correct -->
-![Block Diagram](schematics/block_diagram.png)
+![Block Diagram](Diagrama.drawio.png)
 
 ### Schematic
 
