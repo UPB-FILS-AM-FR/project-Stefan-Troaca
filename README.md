@@ -17,7 +17,7 @@ Je souhaitais travailler sur ce projet car il combine des principes électroniqu
 
 ### Schematic
 
-![Schematic](schematics/kicad_schematic.png)
+![Schematic](Project_Schema_ETCH-A-SKETCH.png)
 
 ### Components
 
