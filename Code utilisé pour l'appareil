@@ -1,0 +1,65 @@
+#include <Arduino.h>
+#include <TFT_eSPI.h>
+
+TFT_eSPI tft = TFT_eSPI();
+
+#define POT_X 34
+#define POT_Y 35
+#define POT_HUE 32
+#define POT_BRIGHT 33
+
+int lastX = -1;
+int lastY = -1;
+
+uint16_t hsvTo565(float h, float v) {
+    float r, g, b;
+
+    int i = int(h * 6);
+    float f = h * 6 - i;
+    float q = v * (1 - f);
+    float t = v * f;
+
+    switch(i % 6){
+        case 0: r=v; g=t; b=0; break;
+        case 1: r=q; g=v; b=0; break;
+        case 2: r=0; g=v; b=t; break;
+        case 3: r=0; g=q; b=v; break;
+        case 4: r=t; g=0; b=v; break;
+        case 5: r=v; g=0; b=q; break;
+    }
+
+    return tft.color565(r*255, g*255, b*255);
+}
+
+void setup() {
+    Serial.begin(115200);
+
+    tft.init();
+    tft.setRotation(1);
+    tft.fillScreen(TFT_BLACK);
+
+    analogReadResolution(12); 
+}
+
+void loop() {
+    int rawX = analogRead(POT_X);
+    int rawY = analogRead(POT_Y);
+    int rawHue = analogRead(POT_HUE);
+    int rawBright = analogRead(POT_BRIGHT);
+
+    int x = map(rawX, 0, 4095, 0, 127);
+    int y = map(rawY, 0, 4095, 0, 159);
+
+    float hue = rawHue / 4095.0;      
+    float brightness = rawBright / 4095.0; 
+
+    uint16_t color = hsvTo565(hue, brightness);
+
+    if (x != lastX || y != lastY) {
+        tft.drawPixel(x, y, color);
+        lastX = x;
+        lastY = y;
+    }
+
+    delay(5);
+}
