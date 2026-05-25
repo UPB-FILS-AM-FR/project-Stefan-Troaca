@@ -37,8 +37,7 @@ Je souhaitais travailler sur ce projet car il combine des principes électroniqu
 
 | Library | Description | Usage |
 |---------|-------------|-------|
-| [TFT_eSPI](https://github.com/Bodmer/TFT_eSPI) | TFT graphics library for Arduino processors with performance optimisation for RP2040, STM32, ESP8266 and ESP32
-Supports TFT displays using drivers (ILI9341 etc.) that operate with hardware SPI or 8/16-bit parallel | Used for manipulating the TFT display functions  |
+| [TFT_eSPI](https://github.com/Bodmer/TFT_eSPI) | TFT graphics library for Arduino processors with performance optimisation for RP2040, STM32, ESP8266 and ESP32, supports TFT displays using drivers that operate with hardware SPI or 8/16-bit parallel | Used for manipulating the TFT display functions  |
 
 
 ## Log
